@@ -1,13 +1,13 @@
 @charset "UTF-8";
 /*
-Theme Name: Exercice 10 - Child
+Theme Name: Exercice 9 - Child
 Theme URI: 127.0.0.1/tp2-veille
-Description: Child theme of Exercice 10 - Programmation et Veille Technologique
+Description: Child theme of Exercice 9 - Programmation et Veille Technologique
 Author: Jordan Lapointe
 Author URI: jordanlapointe.ca
 Template: tp2-veille
 Version: 1.0
-Text Domain: exercice-10-child
+Text Domain: exercice-9-child
 */
 /************ Imports ************/
 /** Variables **/
@@ -21,7 +21,7 @@ Text Domain: exercice-10-child
 /** Gutenberg Classes **/
 /** Footer **/
 /*********************************/
-.container-evenements .articles-evenements .content-post, .site-content, .site-content .categorie-conferences, .site-content .categorie-nouvelles, .site-content .categorie-nouvelles .categorie-nouvelle-contenu .articles-nouvelles {
+.container-evenements .articles-evenements .content-post, .site-content, .site-content .categorie-conferences, .site-content .categorie-nouvelles, .site-content .categorie-nouvelles .categorie-nouvelle-contenu .articles-nouvelles, .site-content .content-area, .site-content .content-area .site-main .categories-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,7 +39,7 @@ Text Domain: exercice-10-child
           align-items: center;
 }
 
-.site-header, .site-branding, .main-navigation .menu, .site-content .categorie-conferences .articles-conferences, .site-content .categorie-nouvelles .categorie-nouvelle-contenu, footer {
+.site-header, .site-branding, .main-navigation .menu, .site-content .categorie-conferences .articles-conferences, .site-content .categorie-nouvelles .categorie-nouvelle-contenu, .site-content .content-area .site-main .categories-container .categories-articles, footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -129,6 +129,7 @@ body {
 /** Imports **/
 /** Content Front Page **/
 /** Content Événements **/
+/** Content Nouvelles **/
 /*********************************/
 .container-evenements {
   width: 90vw;
@@ -269,6 +270,54 @@ body {
 
 .site-content .categorie-nouvelles .categorie-nouvelle-contenu .articles-nouvelles .title-article a:hover {
   color: #0978C0;
+}
+
+.site-content .content-area .site-main {
+  width: 85%;
+  margin: 2% 0;
+}
+
+.site-content .content-area .site-main .categories-container {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+}
+
+.site-content .content-area .site-main .categories-container .categories-articles {
+  margin: 1% 0;
+}
+
+.site-content .content-area .site-main .categories-container .categories-articles .image-article {
+  width: 200px;
+}
+
+.site-content .content-area .site-main .categories-container .categories-articles .content-post {
+  margin-left: 2%;
+}
+
+.site-content .content-area .site-main .categories-container .categories-articles .content-post .title-article {
+  margin: 0.5% 0;
+}
+
+.site-content .content-area .site-main .categories-container .categories-articles .content-post .title-article a {
+  color: #0978C0;
+  text-transform: uppercase;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+.site-content .content-area .site-main .categories-container .categories-articles .content-post .title-article a:hover {
+  color: #39acf6;
+}
+
+.site-content .content-area .site-main .categories-container .categories-articles .content-post .post-date {
+  margin: 0;
+}
+
+.site-content .content-area .site-main .categories-container .categories-articles .content-post .text-extract {
+  text-align: justify;
+  text-align-last: left;
 }
 
 footer {

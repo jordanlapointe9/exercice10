@@ -1,0 +1,52 @@
+.site-content {
+  .content-area {
+    @extend %displayFlexColumnCenter;
+    .site-main {
+      width: 85%;
+      margin: 2% 0;
+
+      .categories-container {
+        @extend %displayFlexColumnCenter;
+        align-items: flex-start;
+        width: 100%;
+
+        .categories-articles {
+          @extend %displayFlexRowCenter;
+
+          margin: 1% 0;
+
+          .image-article {
+            width: 200px;
+          }
+
+          .content-post {
+            margin-left: 2%;
+
+            .title-article {
+              margin: 0.5% 0;
+              a {
+                color: $blue;
+                text-transform: uppercase;
+
+                @include transition(color 0.4s);
+
+                &:hover {
+                  color: lighten($blue, 20%);
+                }
+              }
+            }
+
+            .post-date {
+              margin: 0;
+            }
+
+            .text-extract {
+              text-align: justify;
+              text-align-last: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}
