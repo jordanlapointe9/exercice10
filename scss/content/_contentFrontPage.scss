@@ -1,0 +1,108 @@
+.site-content {
+  @extend %displayFlexColumnCenter;
+
+  .figure-post-thumbnail {
+    width: 100vw;
+    height: 50vh;
+
+    overflow: hidden;
+    margin: 0;
+
+    .post-thumbnail {
+      position: relative;
+      top: -50vh;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .categorie-conferences {
+    @extend %displayFlexColumnCenter;
+    align-items: flex-start;
+    width: 60%;
+
+    margin: 2% 0;
+
+    .articles-conferences {
+      @extend %displayFlexRowCenter;
+      margin: 1% 0;
+
+      .image-article {
+        width: 200px;
+      }
+
+      .content-post {
+        margin-left: 2%;
+
+        .title-article {
+          margin: 0.5% 0;
+
+          a {
+            color: $blue;
+            text-transform: uppercase;
+
+            @include transition(color 0.4s);
+
+            &:hover {
+              color: lighten($blue, 20%);
+            }
+          }
+        }
+
+        .post-date {
+          margin: 0;
+        }
+
+        .text-extract {
+          text-align: justify;
+          text-align-last: left;
+        }
+      }
+    }
+  }
+
+  .categorie-nouvelles {
+    @extend %displayFlexColumnCenter;
+    width: 100%;
+    margin: 2% 0;
+    height: auto;
+
+    .categorie-nouvelle-contenu {
+      @extend %displayFlexRowCenter;
+      flex-wrap: wrap;
+      width: 100%;
+      align-items: flex-end;
+
+      .articles-nouvelles {
+        @extend %displayFlexColumnCenter;
+        margin: 2%;
+        width: 20vw;
+        height: auto;
+
+        .image-article {
+          width: 90%;
+        }
+          .title-article {
+            width: 90%;
+            text-align: center;
+
+            a {
+              color: $blue;
+              text-transform: uppercase;
+              font-size: 0.8em;
+      
+              @include transition(color 0.4s);
+      
+              &:hover {
+                color: $blue;
+              }
+            }
+          }
+
+      }
+    }
+  }
+}

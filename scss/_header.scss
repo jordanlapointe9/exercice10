@@ -1,0 +1,31 @@
+.site-header {
+    @extend %displayFlexRowCenter;
+    justify-content: space-between;
+    height: 8vh;
+    margin: 0 2%;
+}
+
+.site-branding {
+    @extend %displayFlexRowCenter;
+    justify-content: flex-start;
+    width: 50%;
+
+    .custom-logo-link {
+        img {
+            max-width: 40px;
+            height: 40px;
+        }
+    }
+
+    .site-title {
+        margin-left: 5%;
+
+        a {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $blue;
+            font-size: 1.5em;
+        }
+        
+    }
+}
