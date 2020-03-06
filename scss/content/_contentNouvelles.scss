@@ -36,6 +36,25 @@
               }
             }
 
+            .button-article {
+              background-color: $white;
+              border: 2px solid $blue;
+              color: $blue;
+
+              text-transform: uppercase;
+
+              padding: 0.8% 1%;
+
+              cursor: pointer;
+              
+              @include transition(all 0.2s ease-in-out);
+
+              &:hover {
+                background-color: $blue;
+                color: $white;
+              }
+            }
+
             .post-date {
               margin: 0;
             }

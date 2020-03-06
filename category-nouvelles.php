@@ -20,16 +20,17 @@ get_header();
                     <img src="'.get_the_post_thumbnail_url().'" alt="" class="image-article">
                     <div class="content-post">
                         <h3 class="title-article"><a href='.get_the_permalink().'>'.get_the_title().'</a></h3>
-                        <input type="button" value="Lire la suite" id="button-article">
+                        <input data-checked="false" type="button" value="Lire la suite" class="button-article" id="'.get_the_id().'">
                         <p class="text-extract">'.substr(get_the_excerpt(),0,200).'</p>
                     </div>
                 </article>
+                <div class="content-article" id="content-'.get_the_id().'"></div>
                 ';
                 endwhile;
         endif;
         echo '</div>';
-
         ?>
+        
     </div>
     </main><!-- #main -->
 

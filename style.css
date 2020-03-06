@@ -311,6 +311,22 @@ body {
   color: #39acf6;
 }
 
+.site-content .content-area .site-main .categories-container .categories-articles .content-post .button-article {
+  background-color: #fff;
+  border: 2px solid #0978C0;
+  color: #0978C0;
+  text-transform: uppercase;
+  padding: 0.8% 1%;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.site-content .content-area .site-main .categories-container .categories-articles .content-post .button-article:hover {
+  background-color: #0978C0;
+  color: #fff;
+}
+
 .site-content .content-area .site-main .categories-container .categories-articles .content-post .post-date {
   margin: 0;
 }
