@@ -18,12 +18,19 @@ function Ajax(evt) {
   for (let i = 0; i < collectionBtn.length; i++) {
     if(collectionBtn[i].dataset.checked == "true"){
       const localContenuDiv = document.querySelector("#content-" + collectionBtn[i].id);
-      localContenuDiv.innerHTML = "";
+      
+      localContenuDiv.classList.remove("open-div");
+      localContenuDiv.classList.add("close-div");
+
+      setTimeout(() => {
+        localContenuDiv.innerHTML = "";
+      }, 500);
     }
   }
 
   if (evtDataSet == "false") {
     evt.target.dataset.checked = "true";
+    contenuDiv.classList.remove("close-div");
 
     let maRequete = new XMLHttpRequest();
     maRequete.open(
@@ -47,8 +54,14 @@ function Ajax(evt) {
 
     maRequete.send();
   } else {
-    contenuDiv.innerHTML = "";
-    evt.target.dataset.checked = "false";
+    contenuDiv.classList.remove("close-div");
+    contenuDiv.classList.remove("open-div");
+    contenuDiv.classList.add("close-div");
+
+    setTimeout(() => {
+      contenuDiv.innerHTML = "";
+      evt.target.dataset.checked = "false";
+    }, 500);
   }
 }
 ///////////////////////////////////////////////////////
@@ -62,4 +75,5 @@ function creationHTML(postsData) {
   let contenuNouvelle = document.querySelector(contenuNouvelleId);
 
   contenuNouvelle.innerHTML = monHtmlString;
+  contenuNouvelle.classList.add("open-div");
 }

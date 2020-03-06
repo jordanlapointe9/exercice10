@@ -336,6 +336,22 @@ body {
   text-align-last: left;
 }
 
+.site-content .content-area .site-main .categories-container .content-article {
+  overflow: hidden;
+  height: auto;
+  max-height: 0vh;
+  -webkit-transition: max-height 1s ease-in-out;
+  transition: max-height 1s ease-in-out;
+}
+
+.site-content .content-area .site-main .categories-container .open-div {
+  max-height: 1000vh;
+}
+
+.site-content .content-area .site-main .categories-container .close-div {
+  max-height: 0vh;
+}
+
 footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
